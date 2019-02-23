@@ -2,6 +2,8 @@ Temas puntuales de la sección
 Sección 8, Clase 75
 Temas de la sección: 
 
+hello
+
 Aquí cubriremos varios temas como: 
 
 Instalación y pruebas con MongoDB
