@@ -1,7 +1,7 @@
 //Puerto
 process.env.PORT= process.env.PORT || 3000;
-const USER ='diffo23';
-const PASS='Rastafari23.';
+const USER =process.env.MONGO_USER;
+const PASS=process.env.MONGO_PASS;
 
 //Entorno
 

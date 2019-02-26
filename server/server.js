@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 
 const mongoose = require('mongoose');
-
+const PORT = process.env.PORT;
 
 
 const boddyParser = require('body-parser');
@@ -19,6 +19,6 @@ mongoose.connect(process.env.URLDB, (err, res)=>{
 
 })
 
-app.listen(process.env.PORT, ()=>{
-    console.log('Escuchando puerto',3000);
+app.listen(PORT, ()=>{
+    console.log('Escuchando puerto',PORT);
 });
