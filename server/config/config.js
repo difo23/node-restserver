@@ -29,3 +29,18 @@ if (process.env.NODE_ENV === 'dev'){
 
 process.env.URLDB = urlDB;
 
+// vencimiento del token
+
+/*
+60 seg
+60 mint
+24 horas
+30 dias
+*/
+
+process.env.CADUCIDAD_TOKEN =60*60*24*30;
+
+// seed del token
+
+process.env.SEED_TOKEN = process.env.SEED_TOKEN || 'secret-es-el-seed-de-desarrollo';
+

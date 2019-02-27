@@ -1,17 +1,18 @@
 require('./config/config');
 const express = require('express');
+const boddyParser = require('body-parser');
 const app = express();
-
 const mongoose = require('mongoose');
 const PORT = process.env.PORT;
 
 
-const boddyParser = require('body-parser');
+
 
 app.use(boddyParser.urlencoded({ extended: false}));
 app.use(boddyParser.json());
 
-app.use(require('./routes/usuario'));
+//configuracion goblar de rutas
+app.use(require('./routes'));
 
 mongoose.connect(process.env.URLDB, (err, res)=>{
     if(err) throw err;
