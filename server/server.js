@@ -3,9 +3,11 @@ const express = require('express');
 const boddyParser = require('body-parser');
 const app = express();
 const mongoose = require('mongoose');
+const path = require('path');
 const PORT = process.env.PORT;
 
-
+// habilitar la carpeta public
+app.use(express.static(path.resolve(__dirname,'../public')));
 
 
 app.use(boddyParser.urlencoded({ extended: false}));
