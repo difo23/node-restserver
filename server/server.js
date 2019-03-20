@@ -16,7 +16,7 @@ app.use(boddyParser.json());
 //configuracion goblar de rutas
 app.use(require('./routes'));
 
-mongoose.connect(process.env.URLDB, (err, res)=>{
+mongoose.connect(process.env.URLDB,{ useNewUrlParser: true, useCreateIndex: true }, (err, res)=>{
     if(err) throw err;
     console.log("Mongo online");
 
